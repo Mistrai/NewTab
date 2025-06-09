@@ -6,6 +6,10 @@ body {
   color: white;
 }
 
+#bgvid {
+  pointer-events: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
