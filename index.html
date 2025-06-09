@@ -156,6 +156,13 @@
         </div>
     </div>
     <script>
+  const video = document.getElementById('bgvid');
+  if (video) {
+    video.disablePictureInPicture = true;
+    video.controls = false; // prevent implicit controls triggering PiP
+  }
+</script>
+    <script>
   if ('mediaSession' in navigator) {
     navigator.mediaSession.metadata = null;
   }
