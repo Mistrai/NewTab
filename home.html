@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icons/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      #bgvid {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .search-bar {
+        background-color: rgba(30, 30, 30, 0.7);
+        border-radius: 16px;
+        padding: 10px;
+        margin-top: 150px;
+      }
+
+      .bookmarks {
+        background: none;
+        padding: 0;
+        margin-top: -10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 80px;
+        padding: 8px;
+        border-radius: 12px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.25s ease;
+      }
+
+      .tile:hover {
+        background-color: rgba(50, 50, 50, 0.5);
+      }
+
+      .tile img {
+        background-color: #1e1e28;
+        padding: 16px;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        margin-bottom: 8px;
+        object-fit: contain;
+        transition: background-color 0.25s ease;
+      }
+
+      .tile span {
+        font-size: 13px;
+        color: white;
+        margin-top: 2px;
+      }
+
+      a.tile {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="bgvid">
+      <source src="background/Timegear1080.MP4" type="video/mp4" />
+    </video>
+    <div class="container">
+        <div class="logo-row">
+            <img src="firefox-logo.png" class="logo">
+        </div>
+        <div class="search-bar">
+            <form action="https://www.google.com/search" method="GET" style="display: flex; align-items: center; gap: 4px; margin: 0;">
+                <img src="icons/google-icon.png" alt="Google Icon">
+                <input type="text" name="q" placeholder="Search with Google" required autofocus>
+            </form>
+        </div>
+        <div class="bookmarks">
+            <a href="https://www.youtube.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://www.youtube.com" alt="YouTube">
+                <span>YouTube</span>
+            </a>
+            <a href="https://oldschool.runescape.wiki" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://oldschool.runescape.wiki" alt="OSRS Wiki">
+                <span>OSRS Wiki</span>
+            </a>
+            <a href="https://chatgpt.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://chatgpt.com" alt="ChatGPT">
+                <span>ChatGPT</span>
+            </a>
+            <a href="https://drive.google.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://drive.google.com" alt="Google Drive">
+                <span>Drive</span>
+            </a>
+            <a href="https://mail.google.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://mail.google.com" alt="Gmail">
+                <span>Gmail</span>
+            </a>
+            <a href="https://www.icloud.com/mail" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://www.icloud.com" alt="iCloud Mail">
+                <span>iCloud</span>
+            </a>
+            <a href="https://live.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://live.com" alt="Live.com">
+                <span>Microsoft</span>
+            </a>
+            <a href="https://mail.yahoo.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://mail.yahoo.com" alt="Yahoo Mail">
+                <span>Yahoo</span>
+            </a>
+            <a href="https://www.ge-tracker.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://www.ge-tracker.com" alt="GE Tracker">
+                <span>GE Tracker</span>
+            </a>
+            <a href="https://twitch.tv" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://twitch.tv" alt="Twitch">
+                <span>Twitch</span>
+            </a>
+            <a href="https://www.patreon.com/home" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://www.patreon.com" alt="Patreon">
+                <span>Patreon</span>
+            </a>
+            <a href="https://www.reddit.com" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://www.reddit.com" alt="Reddit">
+                <span>Reddit</span>
+            </a>
+            <a href="https://serebii.net" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://serebii.net" alt="Serebii">
+                <span>Serebii</span>
+            </a>
+            <a href="https://bulbagarden.net" class="tile">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain_url=https://bulbagarden.net" alt="Bulbagarden">
+                <span>Bulbagarden</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
