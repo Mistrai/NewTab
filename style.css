@@ -17,6 +17,10 @@ body {
   pointer-events: none;
 }
 
+video::-internal-media-controls-picture-in-picture-button {
+  display: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
