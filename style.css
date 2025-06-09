@@ -40,6 +40,7 @@ video::-internal-media-controls-picture-in-picture-button {
   align-items: center;
   padding-top: 100px;
   width: 100%;
+  z-index: 1;
 }
 
 .logo-row {
