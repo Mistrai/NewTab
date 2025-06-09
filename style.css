@@ -17,6 +17,10 @@ body {
   pointer-events: none;
 }
 
+video::-moz-media-controls-pip-button {
+  display: none !important;
+}
+
 video::-internal-media-controls-picture-in-picture-button {
   display: none;
 }
